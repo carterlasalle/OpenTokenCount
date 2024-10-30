@@ -112,37 +112,31 @@ v0.1.0 - Initial Setup
 - ✅ Configured WASM support for tiktoken
 - ✅ Basic project structure established
 
-Next Tasks:
+v0.2.0 Progress:
+- ✅ Created core tokenizer utility (src/lib/tokenizer.ts)
+  - ✅ Implemented token counting
+  - ✅ Added encoding selection
+  - ✅ Added cost estimation functions
+- ✅ Created types (src/types/index.ts)
+- ✅ Created constants (src/lib/constants.ts)
+- ✅ Implemented API route for tokenization (src/app/api/tokenize/route.ts)
+  - ✅ Added error handling
+  - ✅ Added model-specific encoding support
 
-v0.2.0 Tasks:
-1. Create tokenizer utility (src/app/api/lib/tokenizer.ts)
-2. Set up basic layout components
-3. Create encoding selection component
-4. Implement text input form
-5. Add token count display
-6. Set up API route for tokenization 
+Next Tasks (v0.2.1):
+1. Create UI Components:
+   - Create encoding-select.tsx component
+   - Create tokenize-form.tsx component
+   - Create token-display.tsx component
+   - Create token-count.tsx component
+   - Create cost-estimate.tsx component
 
+2. Create Layout Components:
+   - Implement header.tsx
+   - Implement footer.tsx
+   - Add responsive container
 
+3. Update page.tsx to integrate components
 
-NEXT TASKS:
-1. Create core tokenizer utility (src/lib/tokenizer.ts)
-   - Implement token counting
-   - Add encoding selection
-   - Add cost estimation functions
-
-2. Create basic UI components
-   - Text input form
-   - Encoding selector
-   - Token count display
-   - Results visualization
-
-3. Implement API route for tokenization
-   - Create route.ts in api/tokenize
-   - Add error handling
-   - Add rate limiting
-
-4. Add layout components
-   - Header with navigation
-   - Footer with links
-   - Responsive container
+4. Add basic styling and theme configuration
 
