@@ -4,18 +4,22 @@ import { Footer } from '@/components/layout/footer'
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="relative flex min-h-screen flex-col bg-background">
       <Header />
-      <main className="flex-1 container mx-auto py-8 px-4">
-        <div className="max-w-3xl mx-auto space-y-8">
-          <div className="space-y-2">
-            <h1 className="text-3xl font-bold">OpenTokenCount</h1>
-            <p className="text-muted-foreground">
+      <main className="flex-1">
+        <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
+          <div className="flex max-w-[980px] flex-col items-start gap-2">
+            <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+              OpenTokenCount
+            </h1>
+            <p className="text-xl text-muted-foreground">
               A simple tool to count tokens for OpenAI models using Tiktoken
             </p>
           </div>
-          <TokenizeForm />
-        </div>
+          <div className="grid w-full gap-8">
+            <TokenizeForm />
+          </div>
+        </section>
       </main>
       <Footer />
     </div>

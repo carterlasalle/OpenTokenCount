@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import { useDebounce } from 'use-debounce'
 import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
@@ -46,40 +46,44 @@ export function TokenizeForm() {
     }
   }, [encoding])
 
-  // Real-time tokenization
-  useCallback(() => {
+  useEffect(() => {
     tokenize(debouncedText)
   }, [debouncedText, tokenize])
 
   return (
-    <div className="space-y-6">
-      <Card className="w-full">
+    <div className="grid gap-6">
+      <Card className="border-2">
         <CardContent className="pt-6">
-          <form className="space-y-4">
-            <div className="space-y-2">
+          <div className="grid gap-6">
+            <div className="flex items-center gap-4">
               <EncodingSelect value={encoding} onValueChange={setEncoding} />
             </div>
-            <div className="space-y-2">
+            <div className="grid gap-2">
               <Textarea
                 placeholder="Enter text to tokenize..."
                 value={text}
                 onChange={(e) => setText(e.target.value)}
-                className="min-h-[200px]"
+                className="min-h-[200px] resize-none rounded-md border-2 p-4 font-mono text-sm"
               />
-              <div className="text-sm text-muted-foreground">
-                Characters: {text.length}
+              <div className="flex justify-between text-sm text-muted-foreground">
+                <span>Characters: {text.length}</span>
+                {result && <span>Tokens: {result.count}</span>}
               </div>
             </div>
-          </form>
+          </div>
         </CardContent>
       </Card>
 
       {loading ? (
-        <div className="space-y-4">
-          <Skeleton className="h-[200px] w-full" />
-          <Skeleton className="h-4 w-[250px]" />
-          <Skeleton className="h-4 w-[200px]" />
-        </div>
+        <Card className="border-2">
+          <CardContent className="pt-6">
+            <div className="space-y-4">
+              <Skeleton className="h-4 w-[250px]" />
+              <Skeleton className="h-[100px] w-full" />
+              <Skeleton className="h-4 w-[200px]" />
+            </div>
+          </CardContent>
+        </Card>
       ) : result ? (
         <TokenDisplay result={result} />
       ) : null}
