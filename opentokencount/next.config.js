@@ -1,11 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack(config, { isServer, dev }) {
+  webpack: (config) => {
     config.experiments = {
+      ...config.experiments,
       asyncWebAssembly: true,
-      layers: true,
     }
-
     return config
   }
 }

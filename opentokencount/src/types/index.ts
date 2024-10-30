@@ -9,9 +9,15 @@ export interface TokenizationResult {
     model: string
     cost: number
   }
+  characterCount: number
 }
 
 export interface TokenizerOptions {
   encoding: EncodingType
   model?: string
+}
+
+export interface TokenizerError {
+  message: string
+  code: string
 } 
