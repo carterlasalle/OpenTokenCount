@@ -107,11 +107,22 @@ File Structure:
 YOUR NOTES:
 v0.1.0 - Initial Setup
 - ✅ Project initialized with Next.js 14
-- ✅ Tailwind CSS configured
-- ✅ Shadcn/UI installed
-- ✅ Project structure defined
-- ✅ Tiktoken installed
-- ✅ WASM configuration added to next.config.js
+- ✅ Configured Tailwind CSS
+- ✅ Added Shadcn UI
+- ✅ Configured WASM support for tiktoken
+- ✅ Basic project structure established
+
+Next Tasks:
+
+v0.2.0 Tasks:
+1. Create tokenizer utility (src/app/api/lib/tokenizer.ts)
+2. Set up basic layout components
+3. Create encoding selection component
+4. Implement text input form
+5. Add token count display
+6. Set up API route for tokenization 
+
+
 
 NEXT TASKS:
 1. Create core tokenizer utility (src/lib/tokenizer.ts)
