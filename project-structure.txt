@@ -1,0 +1,39 @@
+opentokencount/
+├── src/
+│   ├── app/
+│   │   ├── api/
+│   │   │   ├── lib/
+│   │   │   │   ├── constants.ts
+│   │   │   │   └── tokenizer.ts
+│   │   │   └── tokenize/
+│   │   ├── fonts/
+│   │   │   ├── GeistMonoVF.woff
+│   │   │   └── GeistVF.woff
+│   │   ├── favicon.ico
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components/
+│   │   ├── ui/
+│   │   ├── forms/
+│   │   ├── results/
+│   │   └── layout/
+│   └── lib/
+│       └── utils.ts
+├── public/
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── next.svg
+│   ├── vercel.svg
+│   └── window.svg
+├── components.json
+├── next-env.d.ts
+├── next.config.js
+├── next.config.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── PRD.txt
+├── README.md
+├── tailwind.config.ts
+└── tsconfig.json 

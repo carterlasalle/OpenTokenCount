@@ -1,0 +1,137 @@
+# OpenTokenCount
+This is a PRD for OpenTokenCount, a web-based user interface designed to provide an easy way to interact with the Tiktoken library.
+Every time you complete a task in the PRD, you should check it off with a checkbox and then update the PRD and then write the next task down. 
+1. Overview
+1.1. Purpose
+
+OpenTokenCount is a web-based user interface designed to provide an easy way to interact with the Tiktoken library. It allows users to tokenize text strings, count tokens, and visualize the encoding process in real-time. OpenTokenCount aims to help developers estimate token usage for OpenAI models, manage API costs, and understand encoding behavior for various models.
+1.2. Background
+
+The Tiktoken library by OpenAI is used to tokenize strings for OpenAI models, enabling developers to estimate how many tokens a string will use. Tokenization is crucial for understanding text processing limits and optimizing costs, as OpenAI’s GPT models use tokens to interpret and respond to inputs. OpenTokenCount will provide a more user-friendly approach to working with Tiktoken, enhancing usability through a graphical interface.
+1.3. Scope
+
+The initial release will focus on providing essential functionalities like encoding selection, text-to-token conversion, token counting, and visualization, and comparing multiple encodings. Advanced features, such as integrating with OpenAI’s API for direct model interaction, will be considered for future updates.
+2. Objectives
+
+    Enhance Tiktoken usability: Simplify tokenization processes by providing a clear, intuitive interface.
+    Improve accuracy: Ensure accurate token counting and decoding for various OpenAI models.
+    Enable real-time encoding analysis: Visualize how different encodings affect tokenization.
+    Cost management: Help users estimate costs for API usage by analyzing token counts.
+
+3. Features
+3.1. Core Features
+
+    Encoding Selection:
+        Allow users to select from supported encodings: cl100k_base, o200k_base, p50k_base, and r50k_base.
+        Provide encoding-specific information and guidance on usage.
+
+    Text Tokenization:
+        Convert user input text into tokens using Tiktoken’s .encode() method.
+        Display token counts and a list of token integers.
+        Provide real-time tokenization visualization, showing the breakdown of the text string.
+
+    Token Counting:
+        Display the total number of tokens for a given input.
+        Indicate whether the token count exceeds the limit for a specified model (e.g., GPT-4, GPT-3.5 Turbo).
+
+    Token Decoding:
+        Enable conversion of tokens back into text using Tiktoken’s .decode() method.
+        Highlight decoding discrepancies when converting single tokens.
+
+3.2. Advanced Features (Future Consideration)
+
+    Multi-encoding Comparison:
+        Compare token counts across different encodings.
+        Provide visual side-by-side comparisons.
+
+    Chat Completion Estimation:
+        Simulate and count tokens for GPT conversation-style prompts.
+        Incorporate functions to handle tool-based API calls.
+
+    Direct API Integration:
+        Allow users to send tokenized text directly to the OpenAI API for prompt completions.
+        Display response tokens and cost estimation.
+
+4. User Stories
+
+    As a developer, I want to enter a text string and see the tokenized output, so that I can understand how OpenAI models will interpret the input.
+    As a data scientist, I want to compare token counts across multiple encodings, so that I can optimize model inputs.
+    As a product manager, I want to estimate token usage costs for different inputs, so that I can manage OpenAI API costs more effectively.
+
+5. User Interface (UI/UX)
+
+    Main Dashboard:
+        Input field for entering text.
+        Dropdown menu for encoding selection.
+        Real-time tokenization visualization panel.
+        Token count display with cost estimation.
+    Comparison View :
+        Side-by-side comparison panels for different encodings.
+
+6. Technical Requirements
+6.1. Technology Stack
+
+    Frontend: Whatever you think is best. I want to use Shadcn/UI.
+    Backend: Next.js with Tiktoken library integration for tokenization processing.
+    API Integration: OpenAI API for chat completions and cost estimation. (if needed)
+    Hosting: Vercel for scalable deployment.
+
+6.2. Compatibility
+
+    Compatible with modern browsers (Chrome, Firefox, Safari, Edge).
+    Responsive design to support desktop and tablet screens.
+
+7. Security Requirements
+
+    Secure API calls with OAuth 2.0 for OpenAI integration. (if needed)
+    Ensure data privacy by processing text locally or through secure servers.
+    Implement input validation to prevent XSS and injection attacks.
+
+8. Metrics & KPIs
+
+    User Adoption: Number of active users within the first month.
+    Accuracy: Token count accuracy rate compared to manual validation.
+    Response Time: Time taken to tokenize and display results (<1 second for inputs <500 tokens).
+    Cost Savings: Reduction in API costs through better input optimization.
+
+9. Risks & Mitigation
+
+    Incorrect token counts: Regular updates to Tiktoken library and thorough testing.
+    User adoption: Focus on user-friendly design and comprehensive documentation.
+    Security vulnerabilities: Implement best practices for web app security and conduct regular audits.
+
+File Structure:
+(Create a file structure for the project, this is on github and vercel)
+
+
+YOUR NOTES:
+v0.1.0 - Initial Setup
+- ✅ Project initialized with Next.js 14
+- ✅ Tailwind CSS configured
+- ✅ Shadcn/UI installed
+- ✅ Project structure defined
+- ✅ Tiktoken installed
+- ✅ WASM configuration added to next.config.js
+
+NEXT TASKS:
+1. Create core tokenizer utility (src/lib/tokenizer.ts)
+   - Implement token counting
+   - Add encoding selection
+   - Add cost estimation functions
+
+2. Create basic UI components
+   - Text input form
+   - Encoding selector
+   - Token count display
+   - Results visualization
+
+3. Implement API route for tokenization
+   - Create route.ts in api/tokenize
+   - Add error handling
+   - Add rate limiting
+
+4. Add layout components
+   - Header with navigation
+   - Footer with links
+   - Responsive container
+

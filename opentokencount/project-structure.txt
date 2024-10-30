@@ -1,0 +1,47 @@
+opentokencount/
+├── .github/
+│   └── workflows/
+│       └── ci.yml [TODO]
+├── src/
+│   ├── app/
+│   │   ├── api/
+│   │   │   └── tokenize/
+│   │   │       └── route.ts [TODO]
+│   │   ├── layout.tsx [EXISTS]
+│   │   ├── page.tsx [EXISTS]
+│   │   ├── fonts/ [EXISTS]
+│   │   │   ├── GeistMonoVF.woff
+│   │   │   └── GeistVF.woff
+│   │   ├── favicon.ico [EXISTS]
+│   │   └── globals.css [EXISTS]
+│   ├── components/
+│   │   ├── ui/ [TODO]
+│   │   │   └── [shadcn-components]
+│   │   ├── forms/ [TODO]
+│   │   │   ├── tokenize-form.tsx
+│   │   │   └── encoding-select.tsx
+│   │   ├── results/ [TODO]
+│   │   │   ├── token-display.tsx
+│   │   │   ├── token-count.tsx
+│   │   │   └── cost-estimate.tsx
+│   │   └── layout/ [TODO]
+│   │       ├── header.tsx
+│   │       └── footer.tsx
+│   ├── lib/
+│   │   ├── utils.ts [EXISTS]
+│   │   ├── constants.ts [TODO]
+│   │   └── tokenizer.ts [TODO]
+│   └── types/
+│       └── index.ts [TODO]
+├── public/
+│   ├── file.svg [EXISTS]
+│   ├── globe.svg [EXISTS]
+│   ├── next.svg [EXISTS]
+│   ├── vercel.svg [EXISTS]
+│   └── window.svg [EXISTS]
+├── components.json [EXISTS]
+├── next.config.ts [EXISTS]
+├── package.json [EXISTS]
+├── postcss.config.mjs [EXISTS]
+├── tailwind.config.ts [EXISTS]
+└── tsconfig.json [EXISTS] 
