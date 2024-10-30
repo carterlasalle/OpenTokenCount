@@ -123,20 +123,36 @@ v0.2.0 Progress:
   - ✅ Added error handling
   - ✅ Added model-specific encoding support
 
-Next Tasks (v0.2.1):
-1. Create UI Components:
-   - Create encoding-select.tsx component
-   - Create tokenize-form.tsx component
-   - Create token-display.tsx component
-   - Create token-count.tsx component
-   - Create cost-estimate.tsx component
+v0.2.1 Progress:
+- ✅ Created UI Components:
+  - ✅ Created encoding-select.tsx component
+  - ✅ Created tokenize-form.tsx component
+  - ✅ Created token-display.tsx component
+- ✅ Created Layout Components:
+  - ✅ Implemented header.tsx
+  - ✅ Implemented footer.tsx
+  - ✅ Added responsive container
+- ✅ Updated page.tsx to integrate components
+- ✅ Added shadcn/ui components and styling
 
-2. Create Layout Components:
-   - Implement header.tsx
-   - Implement footer.tsx
-   - Add responsive container
+Next Tasks (v0.2.2):
+1. Add Error Handling UI:
+   - Add toast notifications for errors
+   - Add loading states and spinners
+   - Implement error boundary
 
-3. Update page.tsx to integrate components
+2. Add Token Visualization Enhancements:
+   - Add hover effects to show token details
+   - Implement token highlighting
+   - Add copy functionality for token values
 
-4. Add basic styling and theme configuration
+3. Add Model Selection:
+   - Create model selector component
+   - Add model-specific token limits
+   - Update cost estimation display
+
+4. Implement Real-time Updates:
+   - Add debounced tokenization
+   - Show token count while typing
+   - Add character count
 
